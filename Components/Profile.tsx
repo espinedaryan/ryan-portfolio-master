@@ -42,7 +42,7 @@ const Profile = () => {
     <div className="relative flex flex-col justify-between items-center gap-8 2xl:gap-8 xl:gap-6 xl:sticky top-0 shadow-md border border-[#2a2a2a] rounded-3xl w-full xl:w-[20%] bg-[#1e1e1e] p-4 sm:p-8 2xl:p-[2rem] xl:p-[1rem]">
       <div className="xl:hidden absolute top-0 right-0 bg-[#2b2b2b] p-3 text-yellow-200 rounded-bl-3xl rounded-tr-3xl cursor-pointer hover:bg-[#353535] transition-all duration-150 ease-in-out select-none" onClick={() => setToggleContacts(!toggleContacts)}>
         <p className="hidden sm:block">Show Contacts</p>
-        <ArrowDown className="sm:hidden" />
+        <ArrowDown className="sm:!hidden" />
       </div>
       <div className="flex xl:flex-col xl:justify-between items-center gap-6 xl:gap-2 xl:h-[50%] w-full">
         {/* Personal Info */}
