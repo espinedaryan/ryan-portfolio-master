@@ -103,7 +103,7 @@ const Portfolio = () => {
     if (filterFocus === 'All') {
       setFilteredProjects(Projects)
     } else {
-      const newFilteredProjects = Projects.filter((project) => (
+      const newFilteredProjects = Projects?.filter((project) => (
         project.type == filterFocus
       ))
   
