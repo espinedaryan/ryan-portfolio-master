@@ -34,72 +34,72 @@ const Portfolio = () => {
     }
   ]
 
-  const Projects = [
-    {
-      name: 'Coffee Shop',
-      imagePath: '/projectImages/coffeeshop.jfif',
-      type: 'Web Development',
-      github: 'https://github.com/espinedaryan/Coffee-Themed-Website',
-      website: '/',
-      id: 1
-    },
-    {
-      name: 'GPT-3',
-      imagePath: '/projectImages/gpt-3.jfif',
-      type: 'Web Development',
-      github: 'https://github.com/espinedaryan/gpt-3',
-      website: '/',
-      id: 2
-    },
-    {
-      name: 'Netflix',
-      imagePath: '/projectImages/netflix.jfif',
-      type: 'Application',
-      github: 'https://github.com/espinedaryan/netflix-try-repo',
-      website: '/',
-      id: 3
-    },
-    {
-      name: 'Amazon Clone',
-      imagePath: '/projectImages/amazon.jfif',
-      type: 'Web Development',
-      github: 'https://github.com/espinedaryan/Amazon-Clone',
-      website: '/',
-      id: 4
-    },
-    {
-      name: 'Facebook Clone',
-      imagePath: '/projectImages/facebook.jfif',
-      type: 'Web Development',
-      github: 'https://github.com/espinedaryan/Facebook-Clone',
-      website: '/',
-      id: 5
-    },
-    {
-      name: 'CodeCrawlers',
-      imagePath: '/projectImages/codecrawlers.png',
-      type: 'Application',
-      github: '/',
-      website: '/',
-      id: 6
-    },
-    {
-      name: 'Youtube Clone',
-      imagePath: '/projectImages/youtube.jfif',
-      type: 'Web Development',
-      github: 'https://github.com/espinedaryan/YouTube-Clone',
-      website: '/',
-      id: 7
-    }
-  ]
-
   const [FilteredProjects, setFilteredProjects] = useState<Project[]>([])
 
   const [filterFocus, setFilterFocus] = useState<string>('All')
 
   // if filterFocus is set to 'All' then the whole Projects array is transferred into the filteredProjects, 
   // else, only the types with the same name as the filterFocus will be displayed.
-  useEffect(() => {   
+  useEffect(() => { 
+    const Projects = [
+      {
+        name: 'Coffee Shop',
+        imagePath: '/projectImages/coffeeshop.jfif',
+        type: 'Web Development',
+        github: 'https://github.com/espinedaryan/Coffee-Themed-Website',
+        website: '/',
+        id: 1
+      },
+      {
+        name: 'GPT-3',
+        imagePath: '/projectImages/gpt-3.jfif',
+        type: 'Web Development',
+        github: 'https://github.com/espinedaryan/gpt-3',
+        website: '/',
+        id: 2
+      },
+      {
+        name: 'Netflix',
+        imagePath: '/projectImages/netflix.jfif',
+        type: 'Application',
+        github: 'https://github.com/espinedaryan/netflix-try-repo',
+        website: '/',
+        id: 3
+      },
+      {
+        name: 'Amazon Clone',
+        imagePath: '/projectImages/amazon.jfif',
+        type: 'Web Development',
+        github: 'https://github.com/espinedaryan/Amazon-Clone',
+        website: '/',
+        id: 4
+      },
+      {
+        name: 'Facebook Clone',
+        imagePath: '/projectImages/facebook.jfif',
+        type: 'Web Development',
+        github: 'https://github.com/espinedaryan/Facebook-Clone',
+        website: '/',
+        id: 5
+      },
+      {
+        name: 'CodeCrawlers',
+        imagePath: '/projectImages/codecrawlers.png',
+        type: 'Application',
+        github: '/',
+        website: '/',
+        id: 6
+      },
+      {
+        name: 'Youtube Clone',
+        imagePath: '/projectImages/youtube.jfif',
+        type: 'Web Development',
+        github: 'https://github.com/espinedaryan/YouTube-Clone',
+        website: '/',
+        id: 7
+      }
+    ]
+    
     if (filterFocus === 'All') {
       setFilteredProjects(Projects)
     } else {
@@ -109,7 +109,7 @@ const Portfolio = () => {
   
       setFilteredProjects(newFilteredProjects)
     }
-  }, [Projects, filterFocus])
+  }, [filterFocus])
 
   return (
     <div className='fade-in-animation flex flex-col gap-6 justify-between items-start w-full'>
