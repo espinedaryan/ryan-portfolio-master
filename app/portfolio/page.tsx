@@ -100,10 +100,10 @@ const Portfolio = () => {
   // if filterFocus is set to 'All' then the whole Projects array is transferred into the filteredProjects, 
   // else, only the types with the same name as the filterFocus will be displayed.
   useEffect(() => {   
-    if (filterFocus === 'All') {
+    if (Projects && filterFocus === 'All') {
       setFilteredProjects(Projects)
     } else {
-      const newFilteredProjects = Projects?.filter((project) => (
+      const newFilteredProjects = Projects.filter((project) => (
         project.type == filterFocus
       ))
   
