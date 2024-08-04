@@ -100,7 +100,7 @@ const Portfolio = () => {
   // if filterFocus is set to 'All' then the whole Projects array is transferred into the filteredProjects, 
   // else, only the types with the same name as the filterFocus will be displayed.
   useEffect(() => {   
-    if (Projects && filterFocus === 'All') {
+    if (filterFocus === 'All') {
       setFilteredProjects(Projects)
     } else {
       const newFilteredProjects = Projects.filter((project) => (
@@ -109,7 +109,7 @@ const Portfolio = () => {
   
       setFilteredProjects(newFilteredProjects)
     }
-  }, [filterFocus])
+  }, [Projects, filterFocus])
 
   return (
     <div className='fade-in-animation flex flex-col gap-6 justify-between items-start w-full'>
