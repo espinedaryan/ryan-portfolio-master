@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: white;
+    font-family: Poppins;
+}
+
+:root {
+    --text-main: #d6d6d6;
+    --text-header: #fafafa;
+}
+
+@keyframes scaleUpModal /* For modal only */ {
+    from {
+        transform: scale(0.6) translate(-50%, -50%);
+    }
+    to {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.scale-up-modal-animation {
+    animation: scaleUpModal 0.15s ease-in-out;
+    transform-origin: left;
+}
+
+.scale-up-animation {
+    animation: scaleUp 0.2s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-animation {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* just put "visiblesb" on the className to overwrite the width and height of a scrollbar */
+.invisiblesb::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #242424;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff292;
+    border-radius: 100vh;
+    height: 1px;
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a3f9c;
+    cursor: pointer;
+}
+
+/* This is to decrease the start of the scrollbar track */
+::-webkit-scrollbar-button:start:increment {
+    width: 35%;
+    background: transparent;
+}
+
+/* This is to decrease the end of the scrollbar track */
+::-webkit-scrollbar-button:end:increment {
+    width: 35%;
+    background: transparent;
+}
+
+/* timeline item */
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 70px);
+    background: #424242;
+}
+  
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -33px;
+    height: 6px;
+    width: 6px;
+    background: #fef08a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #353535;
+}
