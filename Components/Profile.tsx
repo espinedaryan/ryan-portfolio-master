@@ -69,7 +69,7 @@ const Profile = () => {
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)}>
         {otherInfo.map((info) => (
-          <div key={ info.id } className="flex justify-between gap-2 2xl:h-[20%] xl:h-[30%] w-full p-2">
+          <div key={ info.id } className="flex justify-start gap-2 2xl:h-[20%] xl:h-[30%] w-full p-2">
             <div className="flex justify-center items-center p-2 bg-[#272727] border border-[#2a2a2a] shadow-md rounded-lg">
               {info.icon}
             </div>
