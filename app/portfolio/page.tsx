@@ -119,9 +119,9 @@ const Portfolio = () => {
         </h1>
         <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
       </div>
-      <div className='flex gap-4'>
+      <div className='flex gap-4 w-full overflow-x-auto text-nowrap invisiblesb'>
         { Filters.map((filter) => (
-          <div key={ filter.id } className={`${filterFocus === filter.name && 'text-yellow-200'} text-[var(--text-main)] cursor-pointer hover:opacity-80`} onClick={ filter.action }>
+          <div key={ filter.id } className={`${filterFocus === filter.name && 'text-yellow-200'} text-[var(--text-main)] cursor-pointer hover:opacity-80 text-sm sm:text-base`} onClick={ filter.action }>
             { filter.name }
           </div>
         )) }

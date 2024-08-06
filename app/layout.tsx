@@ -16,10 +16,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className="h-screen w-screen px-[3rem] py-[1.5rem] bg-[#111]">
-        <div className="flex flex-col xl:flex-row justify-between gap-6 2xl:gap-6 xl:gap-3 h-full w-full xl:p-[3rem] overflow-y-auto invisiblesb">
+      <div className="h-screen w-screen px-3 py-3 sm:px-[3rem] sm:py-[1.5rem] bg-[#111]">
+        <div className="flex flex-col xl:flex-row gap-6 2xl:gap-6 xl:gap-3 h-full w-full xl:p-[3rem] overflow-y-auto invisiblesb">
           <Profile />
-          <div className='xl:relative shadow-md border border-[#2a2a2a] rounded-3xl w-full xl:w-[80%] self-start bg-[#1e1e1e] p-[2rem]'>
+          <div className='xl:relative xl:min-h-full shadow-md border border-[#2a2a2a] rounded-3xl w-full xl:w-[80%] self-start bg-[#1e1e1e] px-5 pt-4 pb-12 sm:p-[2rem]'>
             <Navbar />
             { children } 
           </div>

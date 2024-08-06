@@ -50,14 +50,14 @@ const Contact = () => {
           Contact Form
         </h2>
         <form onSubmit={handleSubmit} className='w-full'>
-          <div className='flex flex-col gap-6'>
+          <div className='flex flex-col w-full gap-6 items-center'>
             <div className='flex gap-8 w-full'>
-              <input className="rounded-md w-full p-4 bg-[#2a2a2a] border border-[#393939] focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:invalid:ring-red-400" type="text" name="name" placeholder='Full Name' required />
-              <input className="rounded-md w-full p-4 bg-[#2a2a2a] border border-[#393939] focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:invalid:ring-red-400" type="email" name="email" placeholder='Email' required />
+              <input className="text-sm sm:text-base rounded-md w-full p-4 bg-[#2a2a2a] border border-[#393939] focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:invalid:ring-red-400" type="text" name="name" placeholder='Full Name' required />
+              <input className="text-sm sm:text-base rounded-md w-full p-4 bg-[#2a2a2a] border border-[#393939] focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:invalid:ring-red-400" type="email" name="email" placeholder='Email' required />
             </div>
-            <textarea className='rounded-md w-full p-4 bg-[#2a2a2a] border border-[#393939] focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:invalid:ring-red-400 resize-none' name="message" id="" placeholder='Your Message' required>
+            <textarea className='text-sm sm:text-base rounded-md w-full p-4 bg-[#2a2a2a] border border-[#393939] focus:outline-none focus:ring-1 focus:ring-yellow-500 focus:invalid:ring-red-400 resize-none' name="message" id="" placeholder='Your Message' required>
             </textarea>
-            <button className="flex gap-2 flex-nowrap p-4 rounded-lg bg-[#2a2a2a] border border-[#393939] self-end hover:bg-[#3c3c3c] cursor-pointer transition-all duration-150 ease-in-out" type='submit'>
+            <button className="w-full sm:w-fit justify-center self-end text-sm sm:text-base flex items-center gap-2 flex-nowrap p-3 sm:p-4 rounded-lg bg-[#2a2a2a] border border-[#393939] hover:bg-[#3c3c3c] cursor-pointer transition-all duration-150 ease-in-out" type='submit'>
               <SendIcon className="text-2xl text-yellow-200" />
               <div className='text-yellow-200 text-nowrap'>Send Message</div>
             </button>

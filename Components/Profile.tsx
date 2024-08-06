@@ -44,20 +44,20 @@ const Profile = () => {
         <p className="hidden sm:block">Show Contacts</p>
         <ArrowDown className="sm:!hidden" />
       </div>
-      <div className="flex xl:flex-col xl:justify-between items-center gap-6 xl:gap-2 xl:h-[50%] w-full">
+      <div className="flex xl:flex-col xl:justify-between items-center gap-3 sm:gap-6 xl:gap-2 xl:h-[50%] w-full">
         {/* Personal Info */}
         <Image
           src='/img/grad_pic.jpg'
           alt="applicant-photo"
           width={500}
           height={500}
-          className="h-[15vmin] w-[15vmin] xl:h-[60%] xl:w-[80%] rounded-3xl object-cover object-top shadow-md"
+          className="h-[6rem] w-[6rem] sm:h-[15vmin] sm:w-[15vmin] xl:h-[60%] xl:w-[80%] rounded-3xl object-cover object-top shadow-md"
         />
         <div className="flex flex-col xl:items-center gap-4 xl:gap-2">
-          <div className="2xl:text-2xl text-center font-semibold xl:font-extrabold text-[#e0e0e0] text-lg sm:text-2xl xl:text-xl">
+          <div className="2xl:text-2xl text-start font-semibold xl:font-extrabold text-[#e0e0e0] text-base sm:text-2xl xl:text-xl">
             Ryan Miguel M. Espineda {/* Name of the applicant */}
           </div>
-          <div className="w-fit xl:text-center px-4 bg-[#2b2b2b] py-[.5rem] rounded-md 2xl:text-sm text-xs">
+          <div className="w-fit xl:text-center px-4 bg-[#2b2b2b] py-[.5rem] rounded-md 2xl:text-sm text-[.70rem]">
             Frontend Web Developer
           </div>
         </div>

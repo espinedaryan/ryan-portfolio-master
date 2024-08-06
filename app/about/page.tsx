@@ -154,7 +154,7 @@ const About = () => {
         </h1>
         <div className='h-1.5 w-12 bg-yellow-200 rounded-3xl'></div>
       </div>
-      <div className="text-[var(--text-main)] text-justify text-sm md:text-base">
+      <div className="text-[var(--text-main)] text-justify text-xs sm:text-sm md:text-base">
         I&#39;m an aspiring web developer passionate about creating awesome digital experiences. Proficient in HTML, CSS, JavaScript, React.js and Next.js, I thrive on solving problems and paying attention to the nitty-gritty details.
         <br />
         <br />
@@ -199,7 +199,7 @@ const About = () => {
                 <div className="font-semibold text-nowrap text-sm">
                   { review.name }
                 </div>
-                <div className="text-xs text-[#afafaf] text-nowrap">
+                <div className="text-[.66rem] text-[#afafaf] text-nowrap">
                   { review.position }
                 </div>
               </div>
@@ -211,10 +211,10 @@ const About = () => {
             <div className={`${selectedReview ? '' : 'hidden'} fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-screen w-screen bg-black opacity-15`}>  {/* Darken Background */}
               {/* Dark Background */}
             </div>
-            <div className={`${selectedReview ? '' : 'hidden'} scale-up-modal-animation flex flex-col gap-3 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-7 w-[85%] sm:w-[70%] md:w-[56vmin] bg-[#2a2a2a]`}>
+            <div className={`${selectedReview ? '' : 'hidden'} scale-up-modal-animation flex flex-col gap-3 fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-4 sm:p-7 w-[90%] sm:w-[70%] max-h-[80%] md:w-[56vmin] bg-[#2a2a2a]`}>
               {/* Display the clicked review */}
               <CloseButton className="absolute top-2 right-2 p-1 bg-[#1d1d1d] rounded-md text-[var(--text-main)] hover:text-white hover:bg-[#3e3e3e] text-base h-8 w-8" onClick={() => setSelectedReview(undefined)} />
-              <div className="flex gap-8">
+              <div className="flex gap-4 sm:gap-8">
                 <Image
                   src={ selectedReview?.img || '' }   // if selectedReview.img is not defined yet, then it will be assinged '' which is a string
                   alt={ selectedReview?.name || '' }  // to avoid errors, because src and alt both expects a string.
@@ -222,20 +222,20 @@ const About = () => {
                   height={400}
                   className="w-16 rounded-2xl object-cover shadow-sm"
                 />
-                <div className="flex flex-col gap-2">
-                  <div className="text-[var(--text-main)] font-semibold text-2xl">
+                <div className="flex flex-col gap-1 sm:gap-2">
+                  <div className="text-[var(--text-main)] font-semibold sm:text-2xl">
                     { selectedReview?.name }
                   </div>
-                  <div className="text-[#afafaf] text-sm">
+                  <div className="text-[#afafaf] text-xs">
                     { selectedReview?.position }
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-8 overflow-y-auto">
+              <div className="flex items-center sm:gap-8 overflow-y-auto">
                 <div>
-                  <DoubleQuotes className="text-[4rem] text-yellow-200" />
+                  <DoubleQuotes className="hidden sm:block text-[4rem] text-yellow-200" />
                 </div>
-                <div className="text-[var(--text-main)] text-justify">
+                <div className="text-[var(--text-main)] text-justify text-sm sm:text-base">
                   { selectedReview?.value }
                 </div>
               </div>
